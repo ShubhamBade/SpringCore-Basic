@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context=" http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean id="emp1" class="com.springcore.core_Project.Employee" init-method="myInit" destroy-method="myDestroy">
+	<property name="eid" value="101"/>
+	<property name="ename" value="Shubham"/>
+	<property name="esalary" value="45000"/>
+	</bean>
+	
+	<bean id="emp2" class="com.springcore.core_Project.Employee">
+	<property name="eid" value="102"/>
+	<property name="ename" value="Ankita"/>
+	<property name="esalary" value="45000"/>
+	</bean>
+	
+</beans>

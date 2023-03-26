@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context=" http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	<bean id="ad" class="com.springcore.Constructor.Address">
+		<constructor-arg value="Pune"/>
+		<constructor-arg value="India"/>
+	</bean>
+	
+	<bean id="per1" class="com.springcore.Constructor.Person" init-method="init" destroy-method="destroy">
+		<constructor-arg value="VivoBook"/>
+		<constructor-arg value="23" type="int"/>
+		<constructor-arg ref="ad"/>
+		<constructor-arg name="list">
+			<list>
+				<value>Version 15</value>
+				<value>512 SSD robot</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="bean1" class="com.springcore.Constructor.BeanLifeUsingAnnotation">
+		<property name="ver" value="JDK 17.0.0.5"/>
+	</bean>
+	
+</beans>
